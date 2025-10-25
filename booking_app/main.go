@@ -37,6 +37,11 @@ func main() {
 		fmt.Println("Enter your number of tickets:")
 		fmt.Scan(&UserTickets)
 
+		if UserTickets > int(remainingTickets) {
+			fmt.Printf("We only have %v tickets remaining, so you can't book %v tickets\n", remainingTickets, UserTickets)
+			continue
+		}
+
 		remainingTickets = remainingTickets - uint(UserTickets)
 
 		// Store user data
@@ -55,6 +60,12 @@ func main() {
 		}
 
 		fmt.Printf("The first names of bookings are: %v\n", firstNames)
+
+		if remainingTickets == 0 {
+			// end program
+			fmt.Println("Our conference is booked out. Come back next year.")
+			break
+		}
 
 	}
 
