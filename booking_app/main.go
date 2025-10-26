@@ -81,5 +81,21 @@ func main() {
 		}
 
 	}
+	city := "Berlin"
+	switch city {
+	case "New York":
+		// execute New York specific code
+	case "London":
+		// execute London specific code
+
+	case "Singapore", "Hong Kong":
+		// execute code for both Singapore and Hong Kong
+
+	case "Berlin":
+		// execute Berlin specific code
+
+	default:
+		fmt.Println("No valid city selected")
+	}
 
 }
