@@ -32,7 +32,7 @@ func main() {
 			// Book ticket
 			bookTicket(UserTickets, firstName, lastName, email)
 			// Send ticket
-			sendTicket(UserTickets, firstName, lastName, email)
+			go sendTicket(UserTickets, firstName, lastName, email)
 
 			// call function to print first names
 			firstNames := getFirstNames()
